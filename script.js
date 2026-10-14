@@ -15,6 +15,17 @@ function onSeat(event) {
   var count = Number(many.value);
   var start = Number(seat.dataset.n);
 
+    if (Number.isNaN(count)) {
+    many.setCustomValidity("not a number");
+    many.reportValidity();
+    return;
+  }
+  many.setCustomValidity("");
+
+  if (count < 1 || start + count - 1 > 8) return;
+  for (var j = start; j < start + count; j++) {
+    if (document.querySelector("#seat-" + j).classList.contains("taken")) return;
+  }
   for (var i = start; i < start + count; i++) {
     var s = document.querySelector("#seat-" + i);
     s.textContent = name;

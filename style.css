@@ -1,0 +1,25 @@
+header {
+  background: purple;
+  padding: 1rem 1.5rem;
+}
+header h1 {
+  margin: 0;
+  color: white;
+}
+#hall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.seat {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid purple;
+  background: #fff;
+}
+.seat.taken {
+  background: purple;
+  color: white;
+}

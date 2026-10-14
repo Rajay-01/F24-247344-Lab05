@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Sports shop — The seats</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header style="background: purple;">
-  <h1 style="color: white;">Sports shop</h1>
+<header>
+  <h1>Sports shop</h1>
 </header>
-
+<footer>f24a-YOURROLL</footer>
 <main>
   <p id="status">Write a name and a count, then touch an empty seat.</p>
   <p>Free seats: <span id="free">8</span></p>
@@ -27,22 +28,5 @@
     <button class="seat" id="seat-8" data-n="8"><span>8</span></button>
   </div>
 </main>
-<footer>247344</footer>
-<script>
-var hall = document.querySelector("#hall");
-var who = document.querySelector("#who");
-var many = document.querySelector("#many");
-var free = document.querySelector("#free");
-var statusLine = document.querySelector("#status");
-
-if (hall && who && many && free && statusLine) {
-  hall.addEventListener("click", onSeat);
-}
-
-function onSeat(event) {
-  var seat = event.target.closest(".seat");
-  if (seat === null) return;
-}
-</script>
 </body>
 </html>
